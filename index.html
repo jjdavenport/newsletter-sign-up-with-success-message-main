@@ -31,9 +31,9 @@
     </style>
   </head>
   <body>
+    <!-- Sign-up form start -->
     <main>
-      <!-- Sign-up form start -->
-      <div class="sign-up">
+      <div class="sign-up" id="sign-up">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -340,22 +340,46 @@
             And much more!
           </li>
         </ul>
-        <form>
-          <h2>Email address</h2>
-          <input type="email" placeholder="email@company.com" />
-          <button>Subscribe to monthly newsletter</button>
+        <form id="form" novalidate>
+          <legend>Email address</legend>
+          <p id="error"></p>
+          <input id="input" type="email" placeholder="email@company.com" />
+          <button class="btn" type="submit" id="submit">
+            Subscribe to monthly newsletter
+          </button>
         </form>
       </div>
       <!-- Sign-up form end -->
 
       <!-- Success message start -->
-      <div class="success">
+      <div class="success" id="success">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="64"
+          height="64"
+          viewBox="0 0 64 64"
+        >
+          <defs>
+            <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
+              <stop offset="0%" stop-color="#FF6A3A" />
+              <stop offset="100%" stop-color="#FF527B" />
+            </linearGradient>
+          </defs>
+          <g fill="none">
+            <circle cx="32" cy="32" r="32" fill="url(#a)" />
+            <path
+              stroke="#FFF"
+              stroke-width="4"
+              d="m18.286 34.686 8.334 7.98 19.094-18.285"
+            />
+          </g>
+        </svg>
         <h3>Thanks for subscribing!</h3>
-        <p>
+        <p id="email-confirm">
           A confirmation email has been sent to ash@loremcompany.com. Please
           open it and click the button inside to confirm your subscription.
-          Dismiss message
         </p>
+        <button class="btn" id="dismiss">Dismiss message</button>
       </div>
       <!-- Success message end -->
     </main>

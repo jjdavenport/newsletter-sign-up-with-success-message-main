@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Roboto Bold";
+  src: url(./assets/fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Roboto Regular";
+  src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -11,4 +21,53 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto Regular", sans-serif;
+}
+
+:root {
+  --button-background-color: hsl(234, 29%, 20%);
+  --button-font-color: hsl(0, 0%, 100%);
+  --button-hover-color: hsl(4, 100%, 67%);
+}
+
+form {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  height: 3.75rem;
+}
+
+.btn {
+  height: 3.75rem;
+  border: none;
+  color: var(--button-font-color);
+  background-color: var(--button-background-color);
+  border-radius: 1rem;
+}
+
+.btn:hover {
+  background-color: var(--button-hover-color);
+}
+
+.success {
+  display: none;
+}
+
+.success circle {
+  fill: var(--button-hover-color);
+}
+
+.display-success {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-valid {
+  display: none;
+}
+
+@media screen and (width > 25rem) {
 }
