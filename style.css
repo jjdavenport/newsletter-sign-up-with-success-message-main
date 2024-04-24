@@ -28,6 +28,19 @@ body {
   --button-background-color: hsl(234, 29%, 20%);
   --button-font-color: hsl(0, 0%, 100%);
   --button-hover-color: hsl(4, 100%, 67%);
+  --desktop-background-color: hsl(235, 18%, 26%);
+}
+
+main {
+  display: flex;
+}
+
+.content ul {
+  list-style: none;
+}
+
+#desktop {
+  display: none;
 }
 
 form {
@@ -69,5 +82,36 @@ form input {
   display: none;
 }
 
-@media screen and (width > 25rem) {
+@media screen and (width > 35rem) {
+  body {
+    place-items: center;
+    background-color: var(--desktop-background-color);
+  }
+  main {
+    place-items: center;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--button-font-color);
+  }
+  .sign-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .svg {
+    grid-row: 1;
+    grid-column: 2 / 2;
+  }
+  #desktop {
+    display: block;
+  }
+  #mobile {
+    display: none;
+  }
+  .content {
+    grid-row: 1;
+    grid-column: 1 / 1;
+  }
+  .submit-valid {
+    display: none;
+  }
 }
