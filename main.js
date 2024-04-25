@@ -7,6 +7,7 @@ const input = document.getElementById("input");
 const regEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const emailConfirm = document.getElementById("email-confirm");
 const error = document.getElementById("error");
+const emailSpan = document.getElementById("email-span");
 
 function handleSubmit(e) {
   e.preventDefault();
@@ -16,24 +17,23 @@ form.addEventListener("submit", handleSubmit);
 
 submitBtn.addEventListener("click", () => {
   if (input.value == "") {
-    error.style.color = "red";
+    error.style.color = "var(--button-hover-color)";
     error.innerText = "Valid email required";
-    input.style.backgroundColor = "pink";
-    input.style.color = "red";
+    input.style.backgroundColor = "hsl(4, 100%, 67%, 0.2)";
+    input.style.color = "hsl(4, 100%, 67%)";
     console.log("empty");
   } else if (input.value.match(regEx)) {
-    input.style.color = "green";
     signUp.classList.toggle("submit-valid");
     success.classList.add("display-success");
     let email = input.value;
-    emailConfirm.innerText = `A confirmation email has been sent to ${email}. Please
-    open it and click the button inside to confirm your subscription.`;
+    emailSpan.textContent = email;
+    emailSpan.style.fontWeight = "700";
     console.log("valid");
   } else {
-    error.style.color = "red";
-    input.style.backgroundColor = "pink";
+    error.style.color = "hsl(4, 100%, 67%)";
+    input.style.backgroundColor = "hsl(4, 100%, 67%, 0.2)";
     error.innerText = "Valid email required";
-    input.style.color = "red";
+    input.style.color = "hsl(4, 100%, 67%)";
     console.log("invalid");
   }
 });

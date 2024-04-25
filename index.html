@@ -372,8 +372,10 @@
             </li>
           </ul>
           <form id="form" novalidate>
-            <legend>Email address</legend>
-            <p id="error"></p>
+            <div class="legend">
+              <legend>Email address</legend>
+              <p id="error"></p>
+            </div>
             <input id="input" type="email" placeholder="email@company.com" />
             <button class="btn" type="submit" id="submit">
               Subscribe to monthly newsletter
@@ -408,8 +410,9 @@
         </svg>
         <h3>Thanks for subscribing!</h3>
         <p id="email-confirm">
-          A confirmation email has been sent to ash@loremcompany.com. Please
-          open it and click the button inside to confirm your subscription.
+          A confirmation email has been sent to
+          <span id="email-span">ash@loremcompany.com.</span> Please open it and
+          click the button inside to confirm your subscription.
         </p>
         <button class="btn" id="dismiss">Dismiss message</button>
       </div>
