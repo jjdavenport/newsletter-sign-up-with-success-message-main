@@ -150,7 +150,7 @@ form input:focus {
   gap: 1rem;
 }
 
-@media screen and (width > 23.4375rem) {
+@media screen and (width >= 30rem) {
   body {
     place-items: center;
     background-color: var(--desktop-background-color);
