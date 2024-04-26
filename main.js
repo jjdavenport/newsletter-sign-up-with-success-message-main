@@ -18,10 +18,9 @@ form.addEventListener("submit", handleSubmit);
 
 submitBtn.addEventListener("click", () => {
   if (input.value == "") {
-    error.style.color = "hsl(4, 100%, 67%)";
+    input.classList.add("error");
     error.innerText = "Valid email required";
-    input.style.backgroundColor = "hsl(4, 100%, 67%, 0.2)";
-    input.style.color = "hsl(4, 100%, 67%)";
+    error.classList.add("error-text");
   } else if (input.value.match(regEx)) {
     signUp.classList.toggle("submit-valid");
     success.classList.add("display-success");
@@ -29,10 +28,9 @@ submitBtn.addEventListener("click", () => {
     emailSpan.textContent = email;
     emailSpan.style.fontWeight = "700";
   } else {
-    error.style.color = "hsl(4, 100%, 67%)";
-    input.style.backgroundColor = "hsl(4, 100%, 67%, 0.2)";
+    input.classList.add("error");
     error.innerText = "Valid email required";
-    input.style.color = "hsl(4, 100%, 67%)";
+    error.classList.add("error-text");
   }
 });
 
