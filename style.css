@@ -19,10 +19,17 @@ body {
 :root {
   --button-background-color: hsl(234, 29%, 20%);
   --button-font-color: hsl(0, 0%, 100%);
-  --button-hover-color: hsl(4, 100%, 67%);
   --desktop-background-color: hsl(235, 18%, 26%);
   --input-border-color: hsl(231, 7%, 60%);
   --input-error-background: hsl(4, 100%, 67%, 0.2);
+  --button-error-color: hsl(4, 100%, 67%);
+}
+
+.attribution a {
+  background: linear-gradient(112.5deg, hsl(352, 100%, 67%), hsl(4, 100%, 67%));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 main {
@@ -112,7 +119,7 @@ form input {
 
 .btn:hover {
   cursor: pointer;
-  background-color: var(--button-hover-color);
+  background: linear-gradient(112.5deg, hsl(352, 100%, 67%), hsl(4, 100%, 67%));
 }
 
 .btn:focus,
@@ -152,19 +159,22 @@ form input:focus {
 }
 
 .error {
-  color: var(--button-hover-color);
-  border: 0.0625rem solid var(--button-hover-color);
+  color: var(--button-error-color);
+  border: 0.0625rem solid var(--button-error-color);
   background-color: var(--input-error-background);
 }
 
 .error-text {
-  color: var(--button-hover-color);
+  color: var(--button-error-color);
 }
 
 @media screen and (width >= 30rem) {
   body {
     place-items: center;
     background-color: var(--desktop-background-color);
+  }
+  .attribution {
+    color: #fff;
   }
   main {
     border-radius: 2rem;
