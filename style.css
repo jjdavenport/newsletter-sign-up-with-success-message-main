@@ -83,6 +83,7 @@ main {
 }
 
 .legend {
+  height: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -160,8 +161,9 @@ form input:focus {
 
 .error {
   color: var(--button-error-color);
-  border: 0.0625rem solid var(--button-error-color);
+  outline: 0.0625rem solid var(--button-error-color);
   background-color: var(--input-error-background);
+  border: none;
 }
 
 .error-text {
